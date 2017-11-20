@@ -397,7 +397,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
                             title: 'Error',
                             range: [-50, 50]},
                         yaxis: {
-                            title : 'Density',
+                            title : 'Relative Frequency',
                             range: [0, 0.8]}                     
                      };
 
