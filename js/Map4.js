@@ -87,7 +87,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
             fillColor: color,
             fillOpacity: 2 / (feature.getProperty('abs_mean_sp_15min')/10),
             // while an exponent would technically be correct, quadratic looks nicer
-            scale: Math.pow(Math.max(Math.min((20-Math.abs(feature.getProperty('abs_sd_sp_15min')))/3, 5),3), 2)
+            scale: Math.pow(Math.max(Math.min((20-Math.abs(feature.getProperty('abs_sd_sp_15min')))/4, 5),3), 2)
 // 	     scale : 2
           },
           zIndex: Math.floor(feature.getProperty('abs_mean_sp_15min')/10)
