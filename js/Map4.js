@@ -263,6 +263,12 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         var col = 'abs_error_';
         var trace1 = {
             type: "histogram",
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },
             histnorm: 'probability',
             name : "15 min prediction",
             opacity: 0.5,
@@ -272,71 +278,113 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            },
         };
         var trace2 = {
-          x: unpack(rows, col.concat(para,'_30min')),
-        name : "30 min prediction",
-          type: "histogram",
-        	histnorm: 'probability',
-          opacity: 0.5
+            x: unpack(rows, col.concat(para,'_30min')),
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },            
+            name : "30 min prediction",
+            type: "histogram",
+            histnorm: 'probability',
+            opacity: 0.5
 //            marker: {
 //            color: 'red',
 //            },
         };
         var trace3 = {
-          x: unpack(rows, col.concat(para,'_45min')),
-        name : "45 min prediction",
-          type: "histogram",
-        	histnorm: 'probability',
-          opacity: 0.5
+            x: unpack(rows, col.concat(para,'_45min')),
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },
+            name : "45 min prediction",
+            type: "histogram",
+            histnorm: 'probability',
+            opacity: 0.5
 //            marker: {
 //            color: 'red',
 //            },
         };
         var trace4 = {
-          x: unpack(rows, col.concat(para,'_60min')),
-        name : "60 min prediction",
-          type: "histogram",
-        	histnorm: 'probability',
-          opacity: 0.5
+            x: unpack(rows, col.concat(para,'_60min')),
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },
+            name : "60 min prediction",
+            type: "histogram",
+            histnorm: 'probability',
+            opacity: 0.5
 //            marker: {
 //            color: 'red',
 //            },
         };
         var trace5 = {
-          x: unpack(rows, col.concat(para,'_75min')),
-        name : "75 min prediction",
-          type: "histogram",
-        	histnorm: 'probability',
-          opacity: 0.5
+            x: unpack(rows, col.concat(para,'_75min')),
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },
+            name : "75 min prediction",
+            type: "histogram",
+            histnorm: 'probability',
+            opacity: 0.5
 //            marker: {
 //            color: 'red',
 //            },
         };
         var trace6 = {
-          x: unpack(rows, col.concat(para,'_90min')),
-        name : "90 min prediction",
-          type: "histogram",
-        	histnorm: 'probability',
-          opacity: 0.5
+            x: unpack(rows, col.concat(para,'_90min')),
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },
+            name : "90 min prediction",
+            type: "histogram",
+            histnorm: 'probability',
+            opacity: 0.5
 //            marker: {
 //            color: 'red',
 //            },
         };
         var trace7 = {
           x: unpack(rows, col.concat(para,'_105min')),
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },
         name : "105 min prediction",
           type: "histogram",
-        	histnorm: 'probability',
+            histnorm: 'probability',
           opacity: 0.5
 //            marker: {
 //            color: 'red',
 //            },
         };
         var trace8 = {
-          x: unpack(rows, col.concat(para,'_120min')),
-        name : "120 min prediction",
-          type: "histogram",
-        	histnorm: 'probability',
-          opacity: 0.5
+            x: unpack(rows, col.concat(para,'_120min')),
+            xbins :{
+                end : 50,
+                size : 5,
+                start : -50
+                
+            },
+            name : "120 min prediction",
+            type: "histogram",
+            histnorm: 'probability',
+            opacity: 0.5
 //            marker: {
 //            color: 'red',
 //            },
