@@ -21,7 +21,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         LinkID = event.feature.getProperty("Link_ID");
         infowindow.setContent('Link ID : '+LinkID);
         infowindow.setPosition(event.feature.getGeometry().get());
-        infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+        infowindow.setOptions({pixelOffset: new google.maps.Size(0,-5)});
         infowindow.open(map);
          var url1 = root.concat('data/comparison/');
         var url_sp = '_treps_speed_2017-11-13.csv';
