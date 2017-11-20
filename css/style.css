@@ -168,8 +168,8 @@ body {
 .section-above {
     position: absolute;
     top: 53px;
-/*    height: 40%;*/
-    bottom: 500px;
+    height: 40%;
+/*     bottom: 500px; */
     left: 0px;
     width: 100%;
 /*    min-width : 800px;*/
