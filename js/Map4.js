@@ -33,7 +33,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         var chart = getChart(DataUrl, para, canvas, title1);
         para2 = 'vol';
         canvas2 = 'chartdiv2'
-        title2 = 'Volume';
+        title2 = 'Flow';
         var DataUrl2 = url1.concat(LinkID,url_vol);
         var chart2 = getChart(DataUrl2, para2, canvas2, title2);
             
