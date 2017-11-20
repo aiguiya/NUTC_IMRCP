@@ -4,6 +4,7 @@ var today = '2017-11-13';
 var canvas =[];
 var para =[];
 var title = [];
+var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -22,7 +23,7 @@ var title = [];
         infowindow.setPosition(event.feature.getGeometry().get());
         infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
         infowindow.open(map);
-        var url1 = '../data/comparison/';
+         var url1 = root.concat('data/comparison/');
         var url_sp = '_treps_speed_2017-11-13.csv';
         var url_vol='_treps_volume_2017-11-13.csv';
         var DataUrl = url1.concat(LinkID,url_sp);
@@ -33,11 +34,11 @@ var title = [];
         para2 = 'vol';
         canvas2 = 'chartdiv2'
         title2 = 'Volume';
-        var DataUrl2 = url1.concat(LinkID,url_vol);
+        var DataUrl2 = root.concat(LinkID,url_vol);
         var chart2 = getChart(DataUrl2, para2, canvas2, title2);
             
             
-        var url2 = '../data/error/';
+        var url2 = root.concat('data/error/');
         var url_sper = '_Speed_err_2017-11-13.csv';
         var url_voler = '_Vol_err_2017-11-13.csv';
         var histURL =url2.concat(LinkID,url_sper);
