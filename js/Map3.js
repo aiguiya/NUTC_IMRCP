@@ -245,22 +245,10 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 } );
 };
 
-   function getHist(URL, para, canvas, title){ Plotly.d3.csv(URL, function(err, rows){
-            
-        function unpack(row,key){
-            return rows.map(function(row){return row[key];});
-        }
-        
-        
-            
-//        for (var i = 1; i < 500; i++) 
-//        {
-//            k=Math.random();
-//            x1.push(Math.random() + 1);
-//            x2.push(Math.random() + 1.1);
-//        }
-       
-        var col = 'abs_error_';
+function chooseError(er){
+	return {
+		
+	var col = er.concat('_');
         var trace1 = {
             type: "histogram",
             xbins :{
@@ -389,7 +377,156 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            color: 'red',
 //            },
         };
-        var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8];
+        var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8];	
+	};
+}
+
+
+   function getHist(URL, para, canvas, title){ Plotly.d3.csv(URL, function(err, rows){
+            
+        function unpack(row,key){
+            return rows.map(function(row){return row[key];});
+        }
+        
+        
+            
+//        for (var i = 1; i < 500; i++) 
+//        {
+//            k=Math.random();
+//            x1.push(Math.random() + 1);
+//            x2.push(Math.random() + 1.1);
+//        }
+       
+//         var col = 'abs_error_';
+//         var trace1 = {
+//             type: "histogram",
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },
+//             histnorm: 'probability',
+//             name : "15 min prediction",
+//             opacity: 0.5,
+//             x: unpack(rows, col.concat(para,'_15min'))
+// //            marker: {
+// //            color: 'green',
+// //            },
+//         };
+//         var trace2 = {
+//             x: unpack(rows, col.concat(para,'_30min')),
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },            
+//             name : "30 min prediction",
+//             type: "histogram",
+//             histnorm: 'probability',
+//             opacity: 0.5
+// //            marker: {
+// //            color: 'red',
+// //            },
+//         };
+//         var trace3 = {
+//             x: unpack(rows, col.concat(para,'_45min')),
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },
+//             name : "45 min prediction",
+//             type: "histogram",
+//             histnorm: 'probability',
+//             opacity: 0.5
+// //            marker: {
+// //            color: 'red',
+// //            },
+//         };
+//         var trace4 = {
+//             x: unpack(rows, col.concat(para,'_60min')),
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },
+//             name : "60 min prediction",
+//             type: "histogram",
+//             histnorm: 'probability',
+//             opacity: 0.5
+// //            marker: {
+// //            color: 'red',
+// //            },
+//         };
+//         var trace5 = {
+//             x: unpack(rows, col.concat(para,'_75min')),
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },
+//             name : "75 min prediction",
+//             type: "histogram",
+//             histnorm: 'probability',
+//             opacity: 0.5
+// //            marker: {
+// //            color: 'red',
+// //            },
+//         };
+//         var trace6 = {
+//             x: unpack(rows, col.concat(para,'_90min')),
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },
+//             name : "90 min prediction",
+//             type: "histogram",
+//             histnorm: 'probability',
+//             opacity: 0.5
+// //            marker: {
+// //            color: 'red',
+// //            },
+//         };
+//         var trace7 = {
+//           x: unpack(rows, col.concat(para,'_105min')),
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },
+//         name : "105 min prediction",
+//           type: "histogram",
+//             histnorm: 'probability',
+//           opacity: 0.5
+// //            marker: {
+// //            color: 'red',
+// //            },
+//         };
+//         var trace8 = {
+//             x: unpack(rows, col.concat(para,'_120min')),
+//             xbins :{
+//                 end : 50,
+//                 size : 5,
+//                 start : -50
+                
+//             },
+//             name : "120 min prediction",
+//             type: "histogram",
+//             histnorm: 'probability',
+//             opacity: 0.5
+// //            marker: {
+// //            color: 'red',
+// //            },
+//         };
+//         var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7, trace8];
         var layout = {
                         title: title.concat(' Error Distribution'),
                         barmode: "overlay",
