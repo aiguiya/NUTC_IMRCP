@@ -432,4 +432,4 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
            });   
 	   
     })
-}
+};
