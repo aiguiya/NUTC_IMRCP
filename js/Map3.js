@@ -245,15 +245,17 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 } );
 };
 
-   function getHist(URL, para, canvas, title){ Plotly.d3.csv(URL, function(err, rows){
+    function getHist(URL, para, canvas, title){ Plotly.d3.csv(URL, function(err, rows){
             
         function unpack(row,key){
             return rows.map(function(row){return row[key];});
         }
         
+        
+    
+       
         var abs = 'abs_error_';
        var rel = 'rel_error_';
-	   
         var trace1 = {
             type: "histogram",
             xbins :{
@@ -390,13 +392,14 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
                             title: 'Error',
                             range: [-50, 50]},
                         yaxis: {
-                            title : 'Relative Frequency',
+                            title : 'Density',
                             range: [0, 0.8]}                     
                      };
 
-        Plotly.newPlot(canvas, data, layout);
-	   
-	       $("#err_button1").click(function(){
+       Plotly.newPlot(canvas, data, layout);
+       
+       
+       $("#err_button1").click(function(){
            console.log("clicked");
            var update ={
             x: [unpack(rows, abs.concat(para,'_15min')),
@@ -429,7 +432,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
            }
     Plotly.restyle(canvas, update, [0,1,2,3,4,5,6,7]);    
                
-           });   
-	   
+           });
+       
     })
 };
