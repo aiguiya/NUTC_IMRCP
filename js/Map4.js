@@ -251,16 +251,9 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
             return rows.map(function(row){return row[key];});
         }
         
-        
-            
-//        for (var i = 1; i < 500; i++) 
-//        {
-//            k=Math.random();
-//            x1.push(Math.random() + 1);
-//            x2.push(Math.random() + 1.1);
-//        }
-       
-        var col = 'abs_error_';
+        var abs = 'abs_error_';
+       var rel = 'rel_error_';
+	   
         var trace1 = {
             type: "histogram",
             xbins :{
@@ -272,13 +265,13 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
             histnorm: 'probability',
             name : "15 min prediction",
             opacity: 0.5,
-            x: unpack(rows, col.concat(para,'_15min'))
+            x: unpack(rows, abs.concat(para,'_15min'))
 //            marker: {
 //            color: 'green',
 //            },
         };
         var trace2 = {
-            x: unpack(rows, col.concat(para,'_30min')),
+            x: unpack(rows, abs.concat(para,'_30min')),
             xbins :{
                 end : 50,
                 size : 5,
@@ -294,7 +287,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            },
         };
         var trace3 = {
-            x: unpack(rows, col.concat(para,'_45min')),
+            x: unpack(rows, abs.concat(para,'_45min')),
             xbins :{
                 end : 50,
                 size : 5,
@@ -310,7 +303,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            },
         };
         var trace4 = {
-            x: unpack(rows, col.concat(para,'_60min')),
+            x: unpack(rows, abs.concat(para,'_60min')),
             xbins :{
                 end : 50,
                 size : 5,
@@ -326,7 +319,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            },
         };
         var trace5 = {
-            x: unpack(rows, col.concat(para,'_75min')),
+            x: unpack(rows, abs.concat(para,'_75min')),
             xbins :{
                 end : 50,
                 size : 5,
@@ -342,7 +335,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            },
         };
         var trace6 = {
-            x: unpack(rows, col.concat(para,'_90min')),
+            x: unpack(rows, abs.concat(para,'_90min')),
             xbins :{
                 end : 50,
                 size : 5,
@@ -358,7 +351,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            },
         };
         var trace7 = {
-          x: unpack(rows, col.concat(para,'_105min')),
+          x: unpack(rows, abs.concat(para,'_105min')),
             xbins :{
                 end : 50,
                 size : 5,
@@ -374,7 +367,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 //            },
         };
         var trace8 = {
-            x: unpack(rows, col.concat(para,'_120min')),
+            x: unpack(rows, abs.concat(para,'_120min')),
             xbins :{
                 end : 50,
                 size : 5,
@@ -401,6 +394,42 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
                             range: [0, 0.8]}                     
                      };
 
-        var Hist = Plotly.newPlot(canvas, data, layout);
+        Plotly.newPlot(canvas, data, layout);
+	   
+	       $("#err_button1").click(function(){
+           console.log("clicked");
+           var update ={
+            x: [unpack(rows, abs.concat(para,'_15min')),
+               unpack(rows, abs.concat(para,'_30min')),
+               unpack(rows, abs.concat(para,'_45min')),
+               unpack(rows, abs.concat(para,'_60min')),
+               unpack(rows, abs.concat(para,'_75min')),
+               unpack(rows, abs.concat(para,'_90min')),
+               unpack(rows, abs.concat(para,'_105min')),
+               unpack(rows, abs.concat(para,'_120min'))]
+           }
+    Plotly.restyle(canvas, update, [0,1,2,3,4,5,6,7]);    
+               
+           }); 
+       
+       
+       
+       
+       $("#err_button2").click(function(){
+           console.log("clicked");
+           var update ={
+            x: [unpack(rows, rel.concat(para,'_15min')),
+               unpack(rows, rel.concat(para,'_30min')),
+               unpack(rows, rel.concat(para,'_45min')),
+               unpack(rows, rel.concat(para,'_60min')),
+               unpack(rows, rel.concat(para,'_75min')),
+               unpack(rows, rel.concat(para,'_90min')),
+               unpack(rows, rel.concat(para,'_105min')),
+               unpack(rows, rel.concat(para,'_120min'))]
+           }
+    Plotly.restyle(canvas, update, [0,1,2,3,4,5,6,7]);    
+               
+           });   
+	   
     })
 }
