@@ -71,10 +71,10 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         var low = [151, 83, 34];   // color of mag 1.0
         var high = [5, 69, 54];  // color of mag 6.0 and above
         var minMag = 0.0;
-        var maxMag = 10.0;
+        var maxMag = 4.0;
 
         // fraction represents where the value sits between the min and max
-        var fraction = (Math.min(feature.getProperty('abs_mean_sp_15min'), maxMag) - minMag) /
+        var fraction = (Math.min(feature.getProperty('abs_mean_sp_15min')/5, maxMag) - minMag) /
             (maxMag - minMag);
 
         var color = interpolateHsl(low, high, fraction);
