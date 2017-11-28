@@ -1,6 +1,6 @@
 var map;
 var LinkID;
-var today = '2017-11-13';
+var today = '10/16/17 - 10/20/17';
 var canvas =[];
 var para =[];
 var title = [];
@@ -24,8 +24,8 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         infowindow.setOptions({pixelOffset: new google.maps.Size(0,-5)});
         infowindow.open(map);
          var url1 = root.concat('data/comparison/');
-        var url_sp = '_treps_speed_2017-11-13.csv';
-        var url_vol='_treps_volume_2017-11-13.csv';
+        var url_sp = '_treps_speed.csv';
+        var url_vol='_treps_volume.csv';
         var DataUrl = url1.concat(LinkID,url_sp);
         para = 'sp';
         title1 = 'Speed';
@@ -39,8 +39,8 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
             
             
         var url2 = root.concat('data/error/');
-        var url_sper = '_Speed_err_2017-11-13.csv';
-        var url_voler = '_Vol_err_2017-11-13.csv';
+        var url_sper = '_Speed_err.csv';
+        var url_voler = '_Vol_err.csv';
         var histURL =url2.concat(LinkID,url_sper);
         var histURL_vol =url2.concat(LinkID,url_voler);
 
@@ -74,7 +74,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         var maxMag = 4.0;
 
         // fraction represents where the value sits between the min and max
-        var fraction = (Math.min(feature.getProperty('abs_mean_sp_15min')/5, maxMag) - minMag) /
+        var fraction = (Math.min(feature.getProperty('abs_mean_sp_15min'), maxMag) - minMag) /
             (maxMag - minMag);
 
         var color = interpolateHsl(low, high, fraction);
