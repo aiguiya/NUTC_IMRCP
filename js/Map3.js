@@ -68,8 +68,8 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
       }
 
       function styleFeature(feature) {
-        var low = [151, 83, 34];   // color of mag 1.0
-        var high = [5, 69, 54];  // color of mag 6.0 and above
+        var low = [254, 40, 34];   // color of mag 1.0
+        var high = [17, 99, 18];  // color of mag 6.0 and above
         var minMag = 0.0;
         var maxMag = 4.0;
 
