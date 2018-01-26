@@ -146,7 +146,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
       "gridAlpha": 0.5,
       "dashLength": 0,
         "minimum" :0,
-        "maximum" : 100
+        "maximum" : 120
     } ],
 
 //    "startDuration": 1,
