@@ -24,8 +24,8 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         infowindow.setOptions({pixelOffset: new google.maps.Size(0,-5)});
         infowindow.open(map);
          var url1 = root.concat('data/comparison/');
-        var url_sp = '_treps_speed.csv';
-        var url_vol='_treps_volume.csv';
+        var url_sp = '_treps_speed_2017-11-13.csv';
+        var url_vol='_treps_volume_2017-11-13.csv';
         var DataUrl = url1.concat(LinkID,url_sp);
         para = 'sp';
         title1 = 'Speed';
@@ -38,10 +38,10 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         var chart2 = getChart(DataUrl2, para2, canvas2, title2);
 	
         var url2 = root.concat('data/error/');
-        var url_sper = '_Speed_err_';
-        var url_voler = '_Vol_err_';
-        var histURL =url2.concat(LinkID,url_sper,today,'.csv');
-        var histURL_vol =url2.concat(LinkID,url_voler,today,'.csv');
+        var url_sper = '_Speed_err_2017-11-13.csv';
+        var url_voler = '_Vol_err_2017-11-13.csv';
+        var histURL =url2.concat(LinkID,url_sper);
+        var histURL_vol =url2.concat(LinkID,url_voler);
 
         para3 = 'sp';
         canvas3 = 'myHist';
