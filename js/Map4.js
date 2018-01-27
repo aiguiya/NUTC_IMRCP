@@ -1,6 +1,6 @@
 var map;
 var LinkID;
-var today = '10/16/17 - 10/20/17';
+var today = '2017-11-13';
 var canvas =[];
 var para =[];
 var title = [];
@@ -38,10 +38,10 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         var chart2 = getChart(DataUrl2, para2, canvas2, title2);
 	
         var url2 = root.concat('data/error/');
-        var url_sper = '_Speed_err.csv';
-        var url_voler = '_Vol_err.csv';
-        var histURL =url2.concat(LinkID,url_sper);
-        var histURL_vol =url2.concat(LinkID,url_voler);
+        var url_sper = '_Speed_err_';
+        var url_voler = '_Vol_err_';
+        var histURL =url2.concat(LinkID,url_sper,today,'.csv');
+        var histURL_vol =url2.concat(LinkID,url_voler,today,'.csv');
 
         para3 = 'sp';
         canvas3 = 'myHist';
