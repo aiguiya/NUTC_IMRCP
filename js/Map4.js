@@ -57,7 +57,7 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
         var script = document.createElement('script');
         script.setAttribute(
             'src',
-            'data/Detector_call.json');
+            'data/Detector_full.json');
         document.getElementsByTagName('head')[0].appendChild(script);
       }
 
