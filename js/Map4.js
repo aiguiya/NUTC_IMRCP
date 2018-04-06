@@ -4,6 +4,9 @@ var today = '2017-11-13';
 var canvas =[];
 var para =[];
 var title = [];
+var event_list =[];
+var weatehr_list = [];
+
 var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
 
     function initMap() {
