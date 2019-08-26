@@ -15,7 +15,10 @@ var root = 'https://raw.githubusercontent.com/aiguiya/NUTC_IMRCP/gh-pages/';
           zoom: 12,
  //         styles: mapStyle
         });
-
+	
+	var trafficLayer = new google.maps.TrafficLayer();
+	trafficLayer.setMap(map);
+	    
         map.data.setStyle(styleFeature);
         var infowindow = new google.maps.InfoWindow();
         map.data.addListener('click', function(event) {
